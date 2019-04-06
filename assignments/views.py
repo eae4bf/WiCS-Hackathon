@@ -28,3 +28,10 @@ class AssignmentCreateView(generic.CreateView):
     fields = ('title', 'description', 'due_date')
     success_url = reverse_lazy('assignments:index')
 
+def delete_assignment(request,assignment_id):
+    Assignment.objects.filter(id=assignment_id).delete()
+    allAssignments = Assignment.objects.all()
+    context = {
+        'assignment_list': allAssignments
+    }
+    return render(request, 'assignments/index.html',context)
