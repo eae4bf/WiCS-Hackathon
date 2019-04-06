@@ -25,7 +25,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<nav class="links">
 				<ul>
 					<li><a href={% url 'assignments:index' %}>Dashboard</a></li>
-                    <li><a href={% url 'assignments:index' %}>Add Assignment</a></li>
+                    <li><a href={% url 'assignments:create_assignment' %}>Create Assignment</a></li>
 {#					{% if user.username %}#}
 {#					<li><a href={% url 'skillMatch:profile' user.username %}>Your Profile</a></li>#}
 {#					<li><a href={% url 'skillMatch:post_list' %}>Posts</a></li>#}
@@ -67,6 +67,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							<p>Add to your To-Do List!</p>
 						</a>
 					</li>
+
                 </ul>
 {#					{% if user.username %}#}
 {#					<li>#}
@@ -94,12 +95,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<h5><a class="btn btn-primary" href="{% url 'logout' %}">Logout</a></h5>
 				</div>
 				{% else %}
-{#				<section>#}
-{#					<ul class="actions stacked">#}
-{#						<li><a href="{% url 'social:begin' 'google-oauth2' %}" class="button large fit">Log#}
-{#								In</a></li>#}
-{#					</ul>#}
-{#				</section>#}
+				<section>
+					<ul class="actions stacked">
+						<li><a href="{% url 'social:begin' 'google-oauth2' %}" class="button large fit">Log
+								In</a></li>
+					</ul>
+				</section>
 				{% endif %}
 			</div>
 		</section>
