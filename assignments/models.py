@@ -7,7 +7,7 @@ from django.dispatch import receiver
 
 
 class Student(models.Model):
-    user = models.OneToOneField(User, related_name="profile", on_delete=models.CASCADE, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=100)
     # computing_id = models.CharField(max_length=6, unique= True)
     bio = models.TextField()
