@@ -47,4 +47,3 @@ class Assignment(models.Model):
     description = models.CharField(max_length=400, blank = True)
     course = models.ForeignKey(Class, on_delete=models.SET_NULL, null=True, blank=True)  # up to 1 optional relevant course
     due_date = models.DateTimeField(null=True) # captures time of object creation
-    # likes = models.IntegerField()   # upvote and downvote feature?
