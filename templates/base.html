@@ -93,12 +93,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<h5><a class="btn btn-primary" href="{% url 'logout' %}">Logout</a></h5>
 				</div>
 				{% else %}
-{#				<section>#}
-{#					<ul class="actions stacked">#}
-{#						<li><a href="{% url 'social:begin' 'google-oauth2' %}" class="button large fit">Log#}
-{#								In</a></li>#}
-{#					</ul>#}
-{#				</section>#}
+				<section>
+					<ul class="actions stacked">
+						<li><a href="{% url 'social:begin' 'google-oauth2' %}" class="button large fit">Log
+								In</a></li>
+					</ul>
+				</section>
 				{% endif %}
 			</div>
 		</section>
