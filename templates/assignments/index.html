@@ -14,8 +14,14 @@
                 <input type="checkbox" class="task-checkbox" name="checkedbox" id="{{ assignment.id }}" value="{{ assignment.id }}">
                 <label for="{{ todo.id }}"><span class="complete-">{{ assignment.title }}</span></label>
                 <span class="category-{{ assignment.class }}">{{ assignment.class }}</span>
-                <strong class="taskDate"><i class="fa fa-calendar"></i>{{ assignment.due_date }}</strong>
+                <strong class="taskDate"><i class="fa fa-calendar"></i>        {{ assignment.due_date }}</strong>
             </a>
+            <footer>
+                {% if assignment.description %}
+                {{ assignment.description}}
+                {% endif %}
+            </footer>
+
         </article>
     {% endfor %}
 
