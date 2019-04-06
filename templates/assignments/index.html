@@ -10,21 +10,32 @@
     <div id="main">
     {% for assignment in assignment_list %}
         <article class="post">
-            <header>
-                <div class="title">
-                    <h2>{{ assignment.title }}</h2>
-                </div>
-                <div class="meta">
+            <a class="taskItem">
+                <input type="checkbox" class="task-checkbox" name="checkedbox" id="{{ assignment.id }}" value="{{ assignment.id }}">
+                <label for="{{ todo.id }}"><span class="complete-">{{ assignment.title }}</span></label>
+                <span class="category-{{ assignment.class }}">{{ assignment.class }}</span>
+                <strong class="taskDate"><i class="fa fa-calendar"></i>{{ assignment.due_date }}</strong>
+            </a>
+        </article>
+    {% endfor %}
+
+
+{#        <article class="post">#}
+{#            <header>#}
+{#                <div class="title">#}
+{#                    <h2>{{ assignment.title }}</h2>#}
+{#                </div>#}
+{#                <div class="meta">#}
 {#                    <a href="#" class="author">#}
-
-                </div>
-            </header>
-
-            <p>{{ assignment.description }}</p>
-            <footer>
-                {% if assignment.due_date %}
-                Due on:  {{ assignment.due_date }}
-                {% endif %}
+{##}
+{#                </div>#}
+{#            </header>#}
+{##}
+{#            <p>{{ assignment.description }}</p>#}
+{#            <footer>#}
+{#                {% if assignment.due_date %} }#}
+{#                Due on:  {{ assignment.due_date }}#}
+{#                {% endif %}#}
 {#                {% if user.username %}#}
 {#                    {% if person == user.student %}#}
 {#                        <h4>Your sProfile</h4>#}
