@@ -3,7 +3,7 @@ from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from . import views
 
-app_name = 'assignment'
+app_name = 'assignments'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),

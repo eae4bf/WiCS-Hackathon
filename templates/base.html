@@ -24,21 +24,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<h1><a href={% url 'home' %}>Student Skill Match</a></h1>
 			<nav class="links">
 				<ul>
-					<li><a href={% url 'skillMatch:index' %}>Dashboard</a></li>
-					{% if user.username %}
-					<li><a href={% url 'skillMatch:profile' user.username %}>Your Profile</a></li>
-					<li><a href={% url 'skillMatch:post_list' %}>Posts</a></li>
-					{% endif %}
+					<li><a href={% url 'assignments:index' %}>Dashboard</a></li>
+{#					{% if user.username %}#}
+{#					<li><a href={% url 'skillMatch:profile' user.username %}>Your Profile</a></li>#}
+{#					<li><a href={% url 'skillMatch:post_list' %}>Posts</a></li>#}
+{#					{% endif %}#}
 				</ul>
 			</nav>
 			<nav class="main">
 				<ul>
 					<li class="search">
 						<a class="fa-search" href="#search">Search</a>
-						<form id="search" method="get" action="{% url 'skillMatch:student_list' %}">
-							<input type="text" name="usr_query" placeholder="Search" value='{{ student_name }}'
-								required />
-						</form>
+{#						<form id="search" method="get" action="{% url 'skillMatch:student_list' %}">#}
+{#							<input type="text" name="usr_query" placeholder="Search" value='{{ student_name }}'#}
+{#								required />#}
+{#						</form>#}
 					</li>
 					<li class="menu">
 						<a class="fa-bars" href="#menu">Menu</a>
@@ -51,11 +51,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<section id="menu">
 
 			<!-- Search -->
-			<section>
-				<form class="search" method="get" action="{% url 'skillMatch:student_list' %}">
-					<input type="text" name="usr_query" placeholder="Search" value='{{ student_name }}' required />
-				</form>
-			</section>
+{#			<section>#}
+{#				<form class="search" method="get" action="{% url 'skillMatch:student_list' %}">#}
+{#					<input type="text" name="usr_query" placeholder="Search" value='{{ student_name }}' required />#}
+{#				</form>#}
+{#			</section>#}
 
 			<!-- Links -->
 			<section>
@@ -93,12 +93,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<h5><a class="btn btn-primary" href="{% url 'logout' %}">Logout</a></h5>
 				</div>
 				{% else %}
-				<section>
-					<ul class="actions stacked">
-						<li><a href="{% url 'social:begin' 'google-oauth2' %}" class="button large fit">Log
-								In</a></li>
-					</ul>
-				</section>
+{#				<section>#}
+{#					<ul class="actions stacked">#}
+{#						<li><a href="{% url 'social:begin' 'google-oauth2' %}" class="button large fit">Log#}
+{#								In</a></li>#}
+{#					</ul>#}
+{#				</section>#}
 				{% endif %}
 			</div>
 		</section>
@@ -125,46 +125,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<!-- Mini Post -->
 					<article class="mini-post">
 						<header>
-							<h3><a href={% url 'skillMatch:profile' 'jf8he' %}>Jacob Fullerton</a></h3>
-							<a href={% url 'skillMatch:profile' 'jf8he' %} class="author"><img src="https://i.imgur.com/mDVFIvA.jpg" alt="" /></a>
+							<h3><a href={% url 'assignments:todo' %}>Jacob Fullerton</a></h3>
+							<a href={% url 'assignments:todo'%} class="author"><img src="https://i.imgur.com/mDVFIvA.jpg" alt="" /></a>
 						</header>
-						<a href={% url 'skillMatch:profile' 'jf8he' %} class="image"><img src="https://i.imgur.com/mDVFIvA.jpg" alt="" /></a>
-					</article>
-
-					<!-- Mini Post -->
-					<article class="mini-post">
-						<header>
-							<h3><a href={% url 'skillMatch:profile' 'jtr5ee' %}>Jeffery Rhoads</a></h3>
-							<a href={% url 'skillMatch:profile' 'jtr5ee' %} class="author"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
-						</header>
-						<a href={% url 'skillMatch:profile' 'jtr5ee' %} class="image"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
-					</article>
-
-					<!-- Mini Post -->
-					<article class="mini-post">
-						<header>
-							<h3><a href={% url 'skillMatch:profile' 'hlu8jm' %}>Hua Uehara</a></h3>
-							<a href={% url 'skillMatch:profile' 'hlu8jm' %} class="author"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
-						</header>
-						<a href={% url 'skillMatch:profile' 'hlu8jm' %} class="image"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
-					</article>
-
-					<!-- Mini Post -->
-					<article class="mini-post">
-						<header>
-							<h3><a href={% url 'skillMatch:profile' 'kr6eg' %}>Keerthi Radhakrishnan</a></h3>
-							<a href={% url 'skillMatch:profile' 'kr6eg' %} class="author"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
-						</header>
-						<a href={% url 'skillMatch:profile' 'kr6eg' %} class="image"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
-					</article>
-
-					<!-- Mini Post -->
-					<article class="mini-post">
-						<header>
-							<h3><a href={% url 'skillMatch:profile' 'ab5ep' %}>Austin Baney</a></h3>
-							<a href={% url 'skillMatch:profile' 'ab5ep' %} class="author"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
-						</header>
-						<a href={% url 'skillMatch:profile' 'ab5ep' %} class="image"><img src="https://i.imgur.com/Qn95ZJN.png" alt="" /></a>
+						<a href={% url 'assignments:todo'%} class="image"><img src="https://i.imgur.com/mDVFIvA.jpg" alt="" /></a>
 					</article>
 
 				</div>
