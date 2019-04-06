@@ -17,6 +17,22 @@
                 <span class="category-{{ assignment.class }}">{{ assignment.class }}</span>
                 <strong class="taskDate"><i class="fa fa-calendar"></i>       {{ assignment.due_date }}</strong>
             </a>
+            <p>
+                {% if assignment.description %}
+                {{ assignment.description}}
+                {% endif %}
+            </p>
+            <footer>
+
+            <br>
+            <p>
+
+                <ul class="actions">
+                    <li><a href = '{% url "assignments:delete_assignment" assignment.id %}' class="button large">Delete Assignment</a></li>
+                </ul>
+            </p>
+            </footer>
+
         </article>
     {% endfor %}
 
