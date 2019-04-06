@@ -15,11 +15,6 @@ class IndexView(generic.ListView):
 
 # Create your views here.
 
-class IndexView(generic.ListView):
-    template_name = 'skillMatch/base.html'
-    model = Student
-    context_object_name = 'students'
-
 class todoView(ListView):
     model = Assignment
     assignmentList = Assignment.objects.all()
