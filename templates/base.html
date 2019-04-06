@@ -109,11 +109,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		{% endblock %}
 
 		<!-- Sidebar -->
-		<section id="sidebar">
-
-			<!-- Intro -->
-			<section id="intro">
-				<a href="#" class="logo"><img src={% static "images/logo.jpg" %} alt="" /></a>
+{#		<section id="sidebar">#}
+{##}
+{#			<!-- Intro -->#}
+{#			<section id="intro">#}
+{#				<a href="#" class="logo"><img src={% static "images/logo1.png" %} alt="" /></a>#}
 {#				<header>#}
 {#                    <div class="mini-posts">#}
 {#					<h2>Calendar</h2>#}
@@ -121,50 +121,57 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 {#                            <div id="calendar"></div>#}
 {#                            <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>#}
 {#                    </div>#}
-
-				</header>
-			</section>
-
-			<!-- Mini Posts -->
-			<section>
-				<div class="mini-posts">
-					<h2>Creators</h2>
-					<!-- Mini Post -->
-					<article class="mini-post">
+{##}
+{#				</header>#}
+{#			</section>#}
+{##}
+{#			<!-- Mini Posts -->#}
+{#			<section>#}
+{#				<div class="mini-posts">#}
+{#					<h2>DUE TODAY</h2>#}
+{#					<!-- Mini Post -->#}
+{#					<article class="mini-post">#}
+{#                        {% for assignment in assignments %}#}
+{#                            {{ assignment.title }}#}
+{#                            {% if assignment.due_date.weekday == weekday %}#}
+{#                                {{ assignment.title }}#}
+{#                            {% endif %}#}
+{#                        {% endfor %}#}
 {#						<header>#}
 {#							<h3><a href={% url 'assignments:todo' %}>Jacob Fullerton</a></h3>#}
 {#							<a href={% url 'assignments:todo'%} class="author"><img src="https://i.imgur.com/mDVFIvA.jpg" alt="" /></a>#}
 {#						</header>#}
 {#						<a href={% url 'assignments:todo'%} class="image"><img src="https://i.imgur.com/mDVFIvA.jpg" alt="" /></a>#}
-
-					</article>
-
-				</div>
-			</section>
-
-			<!-- About -->
-			<section class="blurb">
-				<h2>About</h2>
-				<p>An easy way to track your assignments, and get things done on time!</p>
-				<ul class="actions">
-					<li><a href="#" class="button">Learn More</a></li>
-				</ul>
-			</section>
-
-
-			<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="https://twitter.com/MarkSherriff" class="fa-twitter"><span
-								class="label">Twitter</span></a></li>
-					<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
-					<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a
-						href="http://unsplash.com">Unsplash</a>.</p>
-			</section>
+{##}
+{#					</article>#}
+{##}
+{#				</div>#}
+{#			</section>#}
+{##}
+{#			<!-- About -->#}
+{#			<section class="blurb">#}
+{#				<h2>About</h2>#}
+{#				<p>An easy way to track your assignments, and get things done on time!</p>#}
+{#				<ul class="actions">#}
+{#					<li><a href="#" class="button">Learn More</a></li>#}
+{#				</ul>#}
+{#			</section>#}
+{##}
+{##}
+{#			<!-- Footer -->#}
+{#			<section id="footer">#}
+{#				<ul class="icons">#}
+{#					<li><a href="https://twitter.com/MarkSherriff" class="fa-twitter"><span#}
+{#								class="label">Twitter</span></a></li>#}
+{#					<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>#}
+{#					<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>#}
+{#					<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>#}
+{#					<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>#}
+{#				</ul>#}
+{#				<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a#}
+{#						href="http://unsplash.com">Unsplash</a>.</p>#}
+{#			</section>#}
+    </div>
 </body>
 
 <!-- Scripts -->

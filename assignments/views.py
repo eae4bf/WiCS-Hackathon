@@ -4,7 +4,7 @@ from django.views import generic
 from django.views.generic import ListView
 from .models import Assignment, Student
 from django.utils import timezone
-
+import datetime
 from assignments.models import Student
 
 
@@ -13,6 +13,8 @@ class IndexView(generic.ListView):
     model = Assignment
     context_object_name = 'assignment_list'
     paginate_by = 10
+    today = datetime.date.today()
+    weekday = today.weekday()
 
 
 # Create your views here.
