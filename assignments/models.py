@@ -45,5 +45,8 @@ class Class(models.Model):
 class Assignment(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=400, blank = True)
-    course = models.ForeignKey(Class, on_delete=models.SET_NULL, null=True, blank=True)  # up to 1 optional relevant course
+    course = models.CharField(max_length=400, blank=True, null=True)  # up to 1 optional relevant course
     due_date = models.DateTimeField(null=True) # captures time of object creation
+
+    class Meta:
+        ordering = ["-due_date"]
