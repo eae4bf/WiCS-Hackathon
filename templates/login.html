@@ -1,0 +1,9 @@
+{% if user.is_authenticated %}
+    <h2>Logged in as {{ user.first_name }} {{ user.last_name }}</h2>
+    <h4>Username: {{ user.username }}</h4>
+    <h4>Email: {{ user.email }}</h4>
+    <a class="btn btn-primary" href="/logout">Logout</a>
+{% else %}
+    <h2>Not currently logged in.</h2>
+    <a class="btn btn-primary" href="/login">Login with Google</a>
+{% endif %}
