@@ -8,8 +8,8 @@ from assignments.models import Student
 
 class IndexView(generic.ListView):
     template_name = 'assignments/index.html'
-    model = Student
-    context_object_name = 'students'
+    model = Assignment
+    context_object_name = 'assignment_list'
     paginate_by = 5
 
 
