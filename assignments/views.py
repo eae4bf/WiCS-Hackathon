@@ -11,7 +11,7 @@ class IndexView(generic.ListView):
     template_name = 'assignments/index.html'
     model = Assignment
     context_object_name = 'assignment_list'
-    paginate_by = 5
+    paginate_by = 10
 
 
 # Create your views here.
